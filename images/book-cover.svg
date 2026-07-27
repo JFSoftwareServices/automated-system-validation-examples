@@ -1,0 +1,68 @@
+<svg viewBox="0 0 640 960" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#180F35"/>
+      <stop offset="55%" stop-color="#211545"/>
+      <stop offset="100%" stop-color="#150C2C"/>
+    </linearGradient>
+
+    <linearGradient id="trendGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4CE0C6"/>
+      <stop offset="100%" stop-color="#B385FF"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="640" height="960" fill="url(#bg)"/>
+
+  <!-- ghost numeral, faint -->
+  <text x="628" y="660" text-anchor="end" font-size="880" font-weight="800" fill="#FFFFFF" opacity="0.045">5</text>
+
+  <!-- top-right diagonal accent -->
+  <line x1="430" y1="0" x2="640" y2="150" stroke="url(#trendGrad)" stroke-width="1.5" opacity="0.35"/>
+
+  <!-- kicker pill -->
+  <rect x="48" y="54" width="222" height="34" rx="17" fill="#FFFFFF" opacity="0.06"/>
+  <rect x="48" y="54" width="222" height="34" rx="17" fill="none" stroke="#FFFFFF" stroke-opacity="0.18"/>
+  <circle cx="66" cy="71" r="4" fill="#4CE0C6"/>
+  <text x="82" y="76" font-size="12" font-weight="600" letter-spacing="2" fill="#C9C6E8">MQL5 &#183; METATRADER 5</text>
+
+  <!-- title -->
+  <text x="46" y="452" font-size="96" font-weight="800" letter-spacing="-2" fill="#F7F7FA">Strategy</text>
+  <text x="46" y="552" font-size="96" font-weight="800" letter-spacing="-2" fill="#F7F7FA">Tester</text>
+
+  <!-- trendline signature mark -->
+  <g filter="url(#glow)">
+    <polyline points="48,614 168,578 268,606 372,540 478,498 592,446"
+              fill="none" stroke="url(#trendGrad)" stroke-width="3.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="48" cy="614" r="5" fill="#4CE0C6"/>
+    <circle cx="268" cy="606" r="4" fill="#8FCBD0"/>
+    <circle cx="478" cy="498" r="4" fill="#C39CF2"/>
+    <circle cx="592" cy="446" r="5" fill="#B385FF"/>
+  </g>
+
+  <!-- subtitle -->
+  <text x="48" y="672" font-size="27" font-weight="400" fill="#B9B6D9">From Basics to Advanced</text>
+
+  <!-- rule + tagline -->
+  <line x1="48" y1="716" x2="266" y2="716" stroke="#3A3465" stroke-width="1"/>
+  <text x="48" y="748" font-size="12" font-weight="600" letter-spacing="3" fill="#8E8AB0">BACKTESTING &#8212; OPTIMISATION &#8212; EA VALIDATION</text>
+
+  <!-- footer mark -->
+  <g transform="translate(48,878)">
+    <rect x="0" y="6" width="6" height="14" fill="#4CE0C6"/>
+    <rect x="10" y="0" width="6" height="20" fill="#B385FF"/>
+    <rect x="20" y="10" width="6" height="10" fill="#4CE0C6"/>
+    <text x="38" y="17" font-size="12" font-weight="600" letter-spacing="2" fill="#8E8AB0">MT5 STRATEGY TESTER</text>
+  </g>
+  <text x="592" y="895" text-anchor="end" font-size="14" fill="#8E8AB0">by Jide</text>
+</svg>
